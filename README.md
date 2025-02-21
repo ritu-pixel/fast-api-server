@@ -5,7 +5,7 @@
 ### **Prerequisites**
 - Python 3.12+
 - pip
-- Virtual Environment (`venv`)
+- Virtual Environment (`venv`) (Optional)
 
   ### **Steps**
 ```sh
