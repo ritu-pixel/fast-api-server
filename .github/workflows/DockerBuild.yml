@@ -1,0 +1,16 @@
+name: Docker image build
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build and Push Docker Image
+        run: |
+          echo "${{ secrets.DOCKERTOKEN }}" | docker login -u "ritu-pixel" --password-stdin
+          docker build -t ritu-pixel/fastapi-server:latest .
+          docker push ritu-pixel/fastapi-server:latest
