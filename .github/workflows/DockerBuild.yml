@@ -19,10 +19,10 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_TOKEN }}
     
     - name: Build Docker image
-      run: docker build -t ritrajput18/fast-api:${{ github.sha }} .
+      run: docker build -t riturajput18/fast-api:${{ github.sha }} .
     
     - name: Push Docker image
       run: |
-        docker push ritrajput18/fast-api:${{ github.sha }}
-        docker tag ritrajput18/fast-api:${{ github.sha }} ritrajput18/fast-api:latest
-        docker push ritrajput18/fast-api:latest
+        docker push riturajput18/fast-api:${{ github.sha }}
+        docker tag riturajput18/fast-api:${{ github.sha }} riturajput18/fast-api:latest
+        docker push riturajput18/fast-api:latest
