@@ -12,6 +12,6 @@ jobs:
     
     - name: Build and Push Docker Image
       run: |
-        echo "${{ secrets.DOCKER_TOKEN }}" | docker login -u "ritu-pixel" --password-stdin
-        docker build -t ritu-pixel/fastapi-server:latest .
+       echo "Ritu@18012003" | docker login -u "riturajput18" --password-stdin
+       docker build -t ritu-pixel/fastapi-server:latest .
         docker push ritu-pixel/fastapi-server:latest
